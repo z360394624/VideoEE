@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.z3603.videoee.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/seekbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/preview_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp" />
+
+        <com.example.z3603.videoee.RangeSeekBar
+            android:id="@+id/see_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/preview_seek_bar" />
+
+        <ImageView
+            android:id="@+id/video_edit_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/video_edit_preview_indicator" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_above="@id/seekbar_layout"
+        android:text="完成" />
+
+    <VideoView
+        android:id="@+id/preview_videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_complete"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp" />
+
+
+
+
+</RelativeLayout>
